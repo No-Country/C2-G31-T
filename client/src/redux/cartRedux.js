@@ -6,6 +6,8 @@ const cartSlice = createSlice({
     products: [],
     quantity: 0, //en la parte superior (arriba)
     total: 0,
+    isFetching: false,
+    error: false,
   },
   reducers: {
     addProduct: (state, action) => {

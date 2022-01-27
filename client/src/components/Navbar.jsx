@@ -71,7 +71,7 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
-  const quantity = useSelector((state) => state.cart.quantity);
+  const quantity = useSelector((state) => state.cart?.quantity);
   const dispatch = useDispatch();
 
   const handleLogout = () => {
@@ -90,13 +90,15 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>LOGO</Logo>
+          <Link style={{ textDecoration: "none" }} to="/">
+            <Logo>LOGO</Logo>
+          </Link>
         </Center>
         <Right>
-          <Link to="/register">
+          <Link style={{ textDecoration: "none" }} to="/register">
             <MenuItem>REGISTRARSE</MenuItem>
           </Link>
-          <Link to="/login">
+          <Link style={{ textDecoration: "none" }} to="/login">
             <MenuItem> INICIAR SESIÓN</MenuItem>
           </Link>
           <MenuItem onClick={handleLogout}>CERRAR SESIÓN</MenuItem>
