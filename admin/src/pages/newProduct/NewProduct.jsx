@@ -13,7 +13,6 @@ import { useDispatch } from "react-redux";
 export default function NewProduct() {
   const [inputs, setInputs] = useState({});
   const [file, setFile] = useState(null);
-  // const [car, setCat] = useState([]);
   const dispatch = useDispatch();
 
   const hanleChange = (e) => {

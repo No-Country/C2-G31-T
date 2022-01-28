@@ -6,7 +6,6 @@ import { userRequest } from "../requestMethod";
 
 const Success = () => {
   const location = useLocation();
-  //in Cart.jsx I sent data and cart. Please check that page for the changes.(in video it's only data)
   const data = location.state.stripeData;
   const products = location.state.products;
   // const cart = location.state.cart;

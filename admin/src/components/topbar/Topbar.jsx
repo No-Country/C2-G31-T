@@ -3,7 +3,7 @@ import "./topbar.css";
 import {
   NotificationsNone,
   Language,
-  Settings,
+  // Settings,
   ExitToApp,
 } from "@material-ui/icons";
 import { useDispatch } from "react-redux";

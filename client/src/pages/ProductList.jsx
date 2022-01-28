@@ -5,7 +5,6 @@ import Products from "../components/Products";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import { mobile } from "../responsive";
-import { Search } from "@material-ui/icons";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 
@@ -30,19 +29,6 @@ const FilterText = styled.span`
   font-weight: 600;
   margin-right: 20px;
   ${mobile({ marginRight: "0px" })}
-`;
-
-const SearchContainer = styled.div`
-  border: 0.5px solid lightgray;
-  display: flex;
-  align-items: center;
-  margin-left: 25px;
-  padding: 5px;
-`;
-
-const Input = styled.input`
-  border: none;
-  ${mobile({ width: "50px" })}
 `;
 
 const Select = styled.select`
@@ -74,21 +60,6 @@ const ProductList = () => {
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
-          {/* <SearchContainer>
-            <Input placeholder="Ej. Ipa" />
-            <Search style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer> */}
-          {/* <Select>
-            <Option disabled selected>
-              Color
-            </Option>
-            <Option>White</Option>
-            <Option>Black</Option>
-            <Option>Red</Option>
-            <Option>Blue</Option>
-            <Option>Yellow</Option>
-            <Option>Green</Option>
-          </Select> */}
           <Select name="size" onChange={handleFilters}>
             <Option disabled>Size</Option>
             <Option>473ML</Option>
