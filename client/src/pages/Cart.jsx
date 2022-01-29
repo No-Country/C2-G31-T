@@ -154,7 +154,6 @@ const Button = styled.button`
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
-  console.log(cart);
   const [stripeToken, setStripeToken] = useState(null);
   const history = useHistory();
 
@@ -194,7 +193,7 @@ const Cart = () => {
         </Top>
         <Bottom>
           <Info>
-            {cart.products.map((product) => (
+            {cart.products?.map((product) => (
               <Product key={product._id}>
                 <ProductDetail>
                   <Image src={product.img} />
@@ -205,7 +204,6 @@ const Cart = () => {
                     <ProductId>
                       <b>ID:</b> {product._id}
                     </ProductId>
-                    {/* <ProductColor color="yellow" /> */}
                     <ProductSize>
                       <b>Size:</b> {product.size}
                     </ProductSize>

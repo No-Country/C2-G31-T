@@ -4,9 +4,10 @@ import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { logout } from "../redux/userRedux";
 import { persistor } from "../redux/store";
+import { resetProduct } from "../redux/cartRedux";
 
 const Container = styled.div`
   height: 60px;
@@ -67,16 +68,19 @@ const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
-  ${mobile({ fontSize: "12px", marginLeft: "10px" })}
+  ${mobile({ fontSize: "10px", marginLeft: "9px" })}
 `;
 
 const Navbar = () => {
   const quantity = useSelector((state) => state.cart?.quantity);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleLogout = () => {
     persistor.purge();
     dispatch(logout());
+    history.push("/");
+    dispatch(resetProduct());
   };
 
   return (
