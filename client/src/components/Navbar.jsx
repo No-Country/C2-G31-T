@@ -28,17 +28,12 @@ const Left = styled.div`
   align-items: center;
 `;
 
-const Language = styled.span`
-  font-size: 14px;
-  cursor: pointer;
-  ${mobile({ display: "none" })}
-`;
 
 const SearchContainer = styled.div`
   border: 0.5px solid lightgray;
   display: flex;
   align-items: center;
-  margin-left: 25px;
+  margin-left: 15px;
   padding: 5px;
 `;
 
@@ -54,6 +49,7 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
+  padding:5px;
   ${mobile({ fontSize: "24px" })}
 `;
 const Right = styled.div`
@@ -67,7 +63,7 @@ const Right = styled.div`
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
-  margin-left: 25px;
+  margin-left: 20px;
   ${mobile({ fontSize: "10px", marginLeft: "9px" })}
 `;
 
@@ -87,7 +83,6 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Language>EN</Language>
           <SearchContainer>
             <Input placeholder="Search" />
             <Search style={{ color: "gray", fontSize: 16 }} />
