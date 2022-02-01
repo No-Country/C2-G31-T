@@ -4,11 +4,14 @@ Este proyecto es una pagina E-commerce de bebidas, fue desarrollado utilizando e
 
 Podrán visualizar la página en https://c231tclient.netlify.app/
 
-Podrán ingresar al sitio de administrador para poder crear, eliminar o modificar los productos en: https://adminc231t.netlify.app/
+Para poder crear, eliminar o modificar los productos: https://adminc231t.netlify.app/
+(SOLO SE PUEDE ACCEDER A ESTE SITIO COMO ADMINISTRADOR)
 
 Credenciales de administrador =>
 Usuario: admin  //
 Contraseña: 123456
+
+Usuario de prueba => usuario: test1 // Contraseña: 123456
 
 
 Colaboradores:
